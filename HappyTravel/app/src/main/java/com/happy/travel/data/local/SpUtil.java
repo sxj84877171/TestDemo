@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 import com.google.gson.Gson;
+import com.happy.travel.base.BaseActivity;
 
 /**
  * Created by elvissun on 8/12/2016.
@@ -22,8 +23,8 @@ public class SpUtil {
 
     public static void setNight(Context context, boolean isNight) {
         prefs.edit().putBoolean("isNight", isNight).commit();
-//        if (context instanceof BaseActivity)
-//            ((BaseActivity) context).reload();
+        if (context instanceof BaseActivity)
+            ((BaseActivity) context).reload();
     }
 
 

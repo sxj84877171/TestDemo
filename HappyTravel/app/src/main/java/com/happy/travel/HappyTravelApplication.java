@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Intent;
 import android.os.Environment;
 
+import com.happy.travel.data.local.SpUtil;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -19,6 +21,7 @@ public class HappyTravelApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        SpUtil.init(this);
         Thread.UncaughtExceptionHandler uncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
         Thread.setDefaultUncaughtExceptionHandler(new CrashHandler(uncaughtExceptionHandler));
     }

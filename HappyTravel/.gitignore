@@ -1,0 +1,9 @@
+*.iml
+.gradle
+/local.properties
+/HappyTravel/.idea/workspace.xml
+/HappyTravel/.idea/libraries
+/HappyTravel/.DS_Store
+/HappyTravel/build
+/HappyTravel/captures
+

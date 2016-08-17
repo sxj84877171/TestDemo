@@ -5,7 +5,7 @@ import android.content.Context;
 /**
  * Created by elvissun on 8/12/2016.
  */
-public abstract class BasePresenter<M, V> {
+public abstract class BasePresenter<M, V> implements Presenter {
 
     public Context mContext;
 
@@ -20,9 +20,13 @@ public abstract class BasePresenter<M, V> {
         this.onStart();
     }
 
+    public void setContext(Context context) {
+        this.mContext = context;
+    }
+
     public abstract void onStart();
 
-    public void onDestroy(){
+    public void onDestroy() {
         mRxManager.clear();
     }
 }

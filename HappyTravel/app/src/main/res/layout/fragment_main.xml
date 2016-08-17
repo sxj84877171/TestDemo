@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.happy.travel.ui.fragement.MainFragment">
+
+    <GridView
+        android:id="@+id/gridvew"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/gray_line"
+        android:gravity="center"
+        android:horizontalSpacing="0.5dp"
+        android:listSelector="@drawable/white_to_grey"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0.5dp"></GridView>
+
+</FrameLayout>

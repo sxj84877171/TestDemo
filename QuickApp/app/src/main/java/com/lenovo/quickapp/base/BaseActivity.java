@@ -33,7 +33,11 @@ public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel>
         mPresenter = TUtil.getT(this, 0);
         mModel = TUtil.getT(this, 1);
         this.initView();
-        if (this instanceof BaseView) mPresenter.setVM(this, mModel);
+        if (this instanceof BaseView){
+            if(mPresenter != null){
+                mPresenter.setVM(this, mModel);
+            }
+        }
     }
 
     @Override
@@ -56,11 +60,6 @@ public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel>
         finish();
         overridePendingTransition(0, 0);
         startActivity(intent);
-    }
-
-    @Override
-    public void setContentView(int layoutResID) {
-            setContentView(layoutResID);
     }
 
     private View getContainer() {

@@ -7,10 +7,44 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.lenovo.quickapp.MainActivity">
+    tools:context=".ui.home.MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/note_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/add_note"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_below="@id/note_content"
+        android:text="add"/>
+
+    <Button
+        android:id="@+id/delete_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_note"
+        android:text="delete"/>
+
+    <Button
+        android:id="@+id/modify_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/delete_note"
+        android:text="modify"/>
+
+    <Button
+        android:id="@+id/query_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/modify_note"
+        android:text="query"/>
+
+    <ListView
+        android:id="@+id/show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/query_notes"></ListView>
 </RelativeLayout>

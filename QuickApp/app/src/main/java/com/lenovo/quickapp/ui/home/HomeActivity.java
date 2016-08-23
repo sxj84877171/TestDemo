@@ -27,9 +27,6 @@ import rx.functions.Action1;
 
 public class HomeActivity extends BaseActivity<HomePresent,HomeModel> implements HomeView {
 
-    private RxDao<Note, Long> noteDao;
-    private RxQuery<Note> notesQuery;
-
     @Bind(R.id.add_note)
     public Button addNote;
 
@@ -51,7 +48,6 @@ public class HomeActivity extends BaseActivity<HomePresent,HomeModel> implements
 
     @Override
     public void initView() {
-        mPresenter.getNotes();
     }
 
     @OnClick(R.id.query_notes)

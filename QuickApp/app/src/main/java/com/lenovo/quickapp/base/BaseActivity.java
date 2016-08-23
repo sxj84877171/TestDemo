@@ -62,13 +62,6 @@ public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel>
         startActivity(intent);
     }
 
-    private View getContainer() {
-        RelativeLayout container = new RelativeLayout(this);
-
-        return container;
-    }
-
-
     public abstract int getLayoutId();
 
     public abstract void initView();

@@ -11,7 +11,6 @@ import rx.subscriptions.CompositeSubscription;
 
 /**
  * 用于管理RxBus的事件和Rxjava相关代码的生命周期处理
- * Created by baixiaokang on 16/4/28.
  */
 public class RxManager {
 

@@ -1,12 +1,13 @@
 package com.lenovo.quickapp.base;
 
+import android.app.Activity;
 import android.content.Context;
 
 /**
  * Created by baixiaokang on 16/4/22.
  */
 public abstract class BasePresenter<M, V> {
-    public Context context;
+    public Activity context;
     public M mModel;
     public V mView;
     public RxManager mRxManager = new RxManager();
